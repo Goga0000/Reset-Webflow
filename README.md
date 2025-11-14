@@ -54,7 +54,7 @@
 
 ## Пример подключения
 
-<link rel="stylesheet" href="path/to/reset-webflow.css"> <!-- или для продакшена минифицированная версия --> <link rel="stylesheet" href="path/to/reset-webflow.min.css">
+### <link rel="stylesheet" href="path/to/reset-webflow.css"> <!-- или для продакшена минифицированная версия --> <link rel="stylesheet" href="path/to/reset-webflow.min.css">
 
 Лицензия и авторство
 Этот проект Reset-Webflow создан и поддерживается пользователем GitHub Goga0000.
