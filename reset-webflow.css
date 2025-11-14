@@ -99,13 +99,12 @@ li {
 /* Общие стили для ссылок,
    убираем подчеркивание и задаём курсор */
 a, a.w-inline-block {
-  text-decoration: underline;
+  text-decoration: none;
   color: inherit;
   font: inherit;
   font-weight: normal;
   cursor: pointer;
   transition: all 0.3s ease; /* Плавные переходы при наведении */
-  text-underline-offset: 3px;
 }
 
 /* Состояния hover и focus для ссылок и inline-block */
@@ -119,10 +118,11 @@ a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
 a.w-button {
   color: white;
   background-color: #000;
+  text-align: middle;
   line-height: normal;
   font-size: 1rem;
   font-weight: normal;
-  padding: 1rem;
+  padding: 0.5rem, 1rem;
   margin: 0;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -144,7 +144,7 @@ input.w-button {
   background-color: #000;
   border: none;
   border-radius: 0;
-  padding: 1rem;
+  padding: 0.5rem, 1rem;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
@@ -164,6 +164,7 @@ input.w-button:hover, input.w-button:focus {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  color: #000;
 }
 
 /* Сброс для label и лейблов Webflow */
@@ -185,7 +186,7 @@ label,
   width: auto;
   height: auto;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem, 1rem;
   font-size: 1rem;
   line-height: normal;
   display: block;
@@ -220,6 +221,11 @@ select::-ms-expand {
   border-radius: 0;
   width: 1rem;
   height: 1rem;
+}
+/* Кастомный ратио */
+.w-radio-input {
+	margin: 0px;
+	margin-right: 10px;
 }
 
 /* Убираем outline при фокусе у чекбоксов и радиокнопок */
