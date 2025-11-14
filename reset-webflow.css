@@ -119,11 +119,11 @@ a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
 a.w-button {
   color: white;
   background-color: #000;
-  text-align: middle;
+  text-align: center;
   line-height: normal;
   font-size: 1rem;
   font-weight: normal;
-  padding: 0.5rem, 1rem;
+  padding: 1rem;
   margin: 0;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -145,7 +145,7 @@ input.w-button {
   background-color: #000;
   border: none;
   border-radius: 0;
-  padding: 0.5rem, 1rem;
+  padding: 1rem;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
@@ -187,7 +187,7 @@ label,
   width: auto;
   height: auto;
   margin: 0;
-  padding: 0.5rem, 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: normal;
   display: block;
