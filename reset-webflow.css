@@ -1,0 +1,272 @@
+/* ========================
+   Базовые стили для html и body
+   ======================== */
+/* Адаптивный размер шрифта с помощью clamp:
+   шрифт масштабируется от 14px до 20px в зависимости от ширины экрана */
+html {
+  font-size: clamp(14px, 1.5vw, 20px);
+  scroll-behavior: smooth; /* Плавный скролл для якорей и прокрутки */
+  -webkit-font-smoothing: antialiased; /* Сглаживание шрифтов для WebKit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Сглаживание для Firefox на Mac */
+  text-rendering: optimizeLegibility; /* Оптимизация рендеринга текста для читаемости */
+  -webkit-text-size-adjust: 100%; /* Отключение масштабирования текста в iOS */
+}
+
+body {
+  min-height: 100vh; /* Минимальная высота страницы равна высоте окна */
+  min-height: 100dvh; /* Динамическая высота для современных браузеров */
+  margin: 0;
+  padding: 0;
+  line-height: 125%; /* Базовая высота строки для удобочитаемости */
+  font-size: 1rem;  /* Размер шрифта согласно html */
+  color: #000; /* Цвет текста по умолчанию */
+  background-color: white; /* Цвет фона */
+}
+
+/* ========================
+   Контейнеры Webflow
+   ======================== */
+/* Сброс максимальной ширины и скрытие псевдоэлементов у контейнеров */
+.w-layout-blockcontainer,
+.w-container {
+  max-width: none;
+}
+.w-container:before,
+.w-container:after {
+  display: none;
+}
+
+/* ========================
+   Типографика и тексты
+   ======================== */
+/* Сброс стилей для адреса, убираем курсив */
+address {
+  font-style: normal;
+  color: inherit; /* Наследуем цвет текста */
+}
+
+/* Убираем отступы у figure */
+figure {
+  margin: 0;
+}
+
+/* Параграфы: сбрасываем margin, наследуем цвет */
+p {
+  margin: 0;
+  color: inherit;
+}
+
+/* Заголовки: убираем отступы, наследуем стили, задаём нормальную высоту строки */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 0;
+  color: inherit;
+}
+
+/* Логика размеров заголовков в rem */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Списки: сброс margin, задаём отступ слева для видимости */
+ul, ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: inherit;
+}
+
+/* Элементы списка: базовые сбросы и наследование */
+li {
+  font-size: 1rem;
+  color: inherit;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================
+   Ссылки и кнопки
+   ======================== */
+/* Общие стили для ссылок,
+   убираем подчеркивание и задаём курсор */
+a, a.w-inline-block {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+  font-weight: normal;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Плавные переходы при наведении */
+}
+
+/* Состояния hover и focus для ссылок и inline-block */
+a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
+  color: #007bff; /* Синий цвет для интерактивности */
+  text-decoration: underline;
+  outline: none; /* Отключаем стандартный outline, если есть кастомный */
+}
+
+/* Стили для кнопок ссылок */
+a.w-button {
+  color: white;
+  background-color: inherit;
+  line-height: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 1rem;
+  margin: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+a.w-button:hover, a.w-button:focus {
+  text-decoration: none;
+  background-color: #303030; /* Тёмный фон при наведении */
+  outline: none;
+}
+
+/* Стили для input-кнопок */
+input.w-button {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: normal;
+  font-weight: normal;
+  line-height: inherit;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+  padding: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+input.w-button:hover, input.w-button:focus {
+  background-color: #303030;
+  outline: none;
+}
+
+/* ========================
+   Формы и элементы управления (Webflow)
+   ======================== */
+/* Сброс отступов и фонов для форм */
+.w-form-done,
+.w-form-fail,
+.w-form {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Сброс для label и лейблов Webflow */
+label,
+.w-form-label {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: normal;
+  color: inherit;
+}
+
+/* Стили для полей ввода и селектов */
+.w-input,
+.w-select {
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid #000;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: normal;
+  display: block;
+}
+
+/* Убираем стандартную стрелку у селекта */
+.w-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+}
+select::-ms-expand {
+  display: none; /* Скрытие стрелочки у IE и Edge */
+}
+
+/* Сбросы и стили чекбоксов и радиокнопок */
+.w-checkbox,
+.w-radio {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: inherit;
+}
+
+/* Кастомный чекбокс */
+.w-checkbox-input {
+  float: left;
+  margin: 0;
+  line-height: normal;
+  border: 1px solid #000;
+  border-radius: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Убираем outline при фокусе у чекбоксов и радиокнопок */
+input[type="checkbox" i]:focus-visible,
+input[type="radio" i]:focus-visible {
+  outline-offset: 0;
+  outline: none;
+}
+
+/* Активный чекбокс со значком */
+.w-checkbox-input--inputType-custom.w--redirected-checked {
+  background-color: #28a745; /* Классический зелёный */
+  border-color: #28a745;
+  background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.w-checkbox-input--inputType-custom.w--redirected-focus {
+  box-shadow: none;
+}
+
+.w-radio {
+  margin: 0;
+  padding: 0;
+}
+
+/* Кастомные радиокнопки */
+.w-form-formradioinput--inputType-custom {
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #868e96; /* Серый бордер */
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.w-form-formradioinput--inputType-custom.w--redirected-checked {
+  border-width: 1px;
+  border-color: #28a745;
+}
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+  box-shadow: none;
+}
+
+.w-dropdown {
+	margin: 0px;
+}
