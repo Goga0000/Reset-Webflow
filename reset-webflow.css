@@ -99,12 +99,13 @@ li {
 /* Общие стили для ссылок,
    убираем подчеркивание и задаём курсор */
 a, a.w-inline-block {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   font: inherit;
   font-weight: normal;
   cursor: pointer;
   transition: all 0.3s ease; /* Плавные переходы при наведении */
+  text-underline-offset: 3px;
 }
 
 /* Состояния hover и focus для ссылок и inline-block */
@@ -117,7 +118,7 @@ a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
 /* Стили для кнопок ссылок */
 a.w-button {
   color: white;
-  background-color: inherit;
+  background-color: #000;
   line-height: normal;
   font-size: 1rem;
   font-weight: normal;
