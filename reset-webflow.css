@@ -99,7 +99,8 @@ li {
 /* Общие стили для ссылок,
    убираем подчеркивание и задаём курсор */
 a, a.w-inline-block {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   color: inherit;
   font: inherit;
   font-weight: normal;
