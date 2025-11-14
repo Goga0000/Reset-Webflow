@@ -54,7 +54,7 @@
 
 ## Пример подключения
 
-[path/to/reset-webflow.css](https://goga0000.github.io/Reset-Webflow/reset-webflow.css) <!-- или для продакшена минифицированная версия --> [path/to/reset-webflow.min.css](https://goga0000.github.io/Reset-Webflow/reset-webflow.min.css)
+[path/to/reset-webflow.css](https://goga0000.github.io/Reset-Webflow/reset-webflow.css) или для продакшена минифицированная версия  [path/to/reset-webflow.min.css](https://goga0000.github.io/Reset-Webflow/reset-webflow.min.css)
 
 Лицензия и авторство
 Этот проект Reset-Webflow создан и поддерживается пользователем GitHub Goga0000.
