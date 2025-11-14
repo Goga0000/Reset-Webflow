@@ -216,6 +216,7 @@ select::-ms-expand {
 .w-checkbox-input {
   float: left;
   margin: 0;
+  margin-right: 10px;
   line-height: normal;
   border: 1px solid #000;
   border-radius: 0;
