@@ -1,4 +1,4 @@
-![Пример логотипа](assets/webflow-zero.png)
+![Пример логотипа](reset.png)
 
 # Reset-Webflow CSS Reset
 
