@@ -1,0 +1,110 @@
+/* Отключение системных before/after-псевдоэлементов у контейнеров и табов Webflow */
+.w-container:before,
+.w-container:after,
+.w-tabs:before,
+.w-tabs:after,
+.w-richtext::before,
+.w-richtext::after {
+  content: none;
+}
+
+/* Удаление стандартной стрелки у select для кроссбраузерной стилизации */
+.w-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+}
+select::-ms-expand {
+  display: none; /* Для IE и Edge — убираем выпадающую стрелку */
+}
+
+/* Сброс отступов у чекбоксов и радиокнопок Webflow */
+.w-checkbox,
+.w-radio {
+  margin: 0;
+  padding: 0;
+}
+
+/* Отключение стандартных before-псевдоэлементов для корректного кастомного отображения */
+.w-checkbox:before,
+.w-radio:before {
+  content: none;
+}
+
+/* Кастомные чекбоксы и радиокнопки — базовые сбросы */
+.w-checkbox-input {
+  float: left;
+  margin: 0;
+}
+.w-radio-input {
+  margin: 0;
+}
+
+/* Удаляем стандартный outline при фокусе у чекбоксов и радиокнопок для кастомных стилей */
+input[type="checkbox" i]:focus-visible,
+input[type="radio" i]:focus-visible {
+  outline-offset: 0;
+  outline: none;
+}
+.w-checkbox-input--inputType-custom.w--redirected-focus,
+.w-form-formradioinput--inputType-custom.w--redirected-focus {
+  box-shadow: none;
+}
+
+/* Кастомные радиокнопки — убираем стандартный вид, добавляем позиционирование, цвет взаимодействия */
+.w-form-formradioinput--inputType-custom {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Активный кастомный radio — делаем бордер современного цвета */
+.w-form-formradioinput--inputType-custom.w--redirected-checked {
+  border-width: 1px;
+  border-color: currentColor;
+}
+/* Вставляем точку выбранного radio */
+.w-form-formradioinput--inputType-custom.w--redirected-checked:after {
+  position: absolute;
+  inset: 2px;
+  width: auto;
+  height: auto;
+  background-color: currentColor;
+  content: "";
+  border-radius: 50%;
+}
+
+/* Оптимизация ссылок и кнопок */
+/* Управление параметрами underline и курсором для ссылок */
+a, a.w-inline-block {
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* Отключаем стандартный outline при фокусе для ссылок */
+a:hover,
+a:focus,
+a.w-inline-block:hover,
+a.w-inline-block:focus {
+  outline: none;
+}
+
+/* Для ссылочных кнопок убираем подчеркивание и задаём pointer */
+a.w-button {
+  cursor: pointer;
+  text-decoration: none;
+}
+a.w-button:hover,
+a.w-button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* Для input-кнопок — аналогично сбрасываем подчеркивание и задаём pointer */
+input.w-button {
+  cursor: pointer;
+  text-decoration: none;
+}
