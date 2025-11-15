@@ -12,12 +12,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  line-height: 125%; /* Базовая высота строки для удобочитаемости */
   font-size: 1rem;  /* Размер шрифта согласно html */
-  color: #000; /* Цвет текста по умолчанию */
-  background-color: white; /* Цвет фона */
 }
 
 /* ========================
@@ -35,7 +30,6 @@ body {
 /* Сброс стилей для адреса, убираем курсив */
 address {
   font-style: normal;
-  color: inherit; /* Наследуем цвет текста */
 }
 
 /* Убираем отступы у figure */
@@ -46,42 +40,20 @@ figure {
 /* Параграфы: сбрасываем margin, наследуем цвет */
 p {
   margin: 0;
-  color: inherit;
 }
 
 /* Заголовки: убираем отступы, наследуем стили, задаём нормальную высоту строки */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-size: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  line-height: normal;
-  letter-spacing: normal;
-  padding: 0;
-  color: inherit;
 }
-
-/* Логика размеров заголовков в rem */
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
 
 /* Списки: сброс margin, задаём отступ слева для видимости */
 ul, ol {
   margin: 0;
-  padding-left: 1.5rem;
-  color: inherit;
 }
 
 /* Элементы списка: базовые сбросы и наследование */
 li {
-  font-size: 1rem;
-  color: inherit;
-  font-weight: normal;
-  line-height: normal;
   margin: 0;
   padding: 0;
 }
@@ -122,9 +94,6 @@ input.w-button {
 label {
   margin: 0;
   padding: 0;
-  font-weight: normal;
-  line-height: normal;
-  color: inherit;
 }
 
 
@@ -149,7 +118,6 @@ select::-ms-expand {
 .w-checkbox-input {
   float: left;
   margin: 0;
-  line-height: normal;
 }
 /* Кастомный ратио */
 .w-radio-input {
