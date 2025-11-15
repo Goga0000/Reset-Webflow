@@ -1,4 +1,4 @@
-reset.png
+[reset.png](https://github.com/Goga0000/Reset-Webflow/blob/0e55913c2507da1060d8233f606c06b97f8b48ed/reset.png)
 
 # Reset-Webflow CSS Reset
 
