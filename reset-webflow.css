@@ -24,10 +24,6 @@ body {
    Контейнеры Webflow
    ======================== */
 /* Сброс максимальной ширины и скрытие псевдоэлементов у контейнеров */
-.w-layout-blockcontainer,
-.w-container {
-  max-width: none;
-}
 .w-container:before,
 .w-container:after {
   display: none;
@@ -96,78 +92,34 @@ li {
 /* Общие стили для ссылок,
    убираем подчеркивание и задаём курсор */
 a, a.w-inline-block {
-  text-decoration: underline;
   text-underline-offset: 3px;
-  color: inherit;
-  font: inherit;
-  font-weight: normal;
   cursor: pointer;
-  transition: all 0.3s ease; /* Плавные переходы при наведении */
 }
 
 /* Состояния hover и focus для ссылок и inline-block */
 a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
-  color: #007bff; /* Синий цвет для интерактивности */
-  text-decoration: underline;
   outline: none; /* Отключаем стандартный outline, если есть кастомный */
 }
 
 /* Стили для кнопок ссылок */
 a.w-button {
-  color: white;
-  background-color: #000;
-  text-align: center;
-  line-height: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  padding: 1rem;
-  margin: 0;
-  transition: all 0.3s ease;
   cursor: pointer;
 }
 a.w-button:hover, a.w-button:focus {
   text-decoration: none;
-  background-color: #303030; /* Тёмный фон при наведении */
   outline: none;
 }
 
 /* Стили для input-кнопок */
 input.w-button {
-  color: #fff;
-  font-size: 1rem;
-  letter-spacing: normal;
-  font-weight: normal;
-  line-height: inherit;
   cursor: pointer;
-  background-color: #000;
-  border: none;
-  border-radius: 0;
-  padding: 1rem;
   text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
 }
-input.w-button:hover, input.w-button:focus {
-  background-color: #303030;
-  outline: none;
-}
-
 /* ========================
    Формы и элементы управления (Webflow)
    ======================== */
-/* Сброс отступов и фонов для форм */
-.w-form-done,
-.w-form-fail,
-.w-form {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  color: #000;
-}
-
 /* Сброс для label и лейблов Webflow */
-label,
-.w-form-label {
+label {
   margin: 0;
   padding: 0;
   font-weight: normal;
@@ -175,20 +127,6 @@ label,
   color: inherit;
 }
 
-/* Стили для полей ввода и селектов */
-.w-input,
-.w-select {
-  color: inherit;
-  background-color: transparent;
-  border: 1px solid #000;
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  line-height: normal;
-  display: block;
-}
 
 /* Убираем стандартную стрелку у селекта */
 .w-select {
@@ -204,10 +142,7 @@ select::-ms-expand {
 /* Сбросы и стили чекбоксов и радиокнопок */
 .w-checkbox,
 .w-radio {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  color: inherit;
+  margin: 0px;
 }
 
 /* Кастомный чекбокс */
@@ -215,15 +150,10 @@ select::-ms-expand {
   float: left;
   margin: 0;
   line-height: normal;
-  border: 1px solid #000;
-  border-radius: 0;
-  width: 1rem;
-  height: 1rem;
 }
 /* Кастомный ратио */
 .w-radio-input {
 	margin: 0px;
-	margin-right: 10px;
 }
 
 /* Убираем outline при фокусе у чекбоксов и радиокнопок */
@@ -232,55 +162,26 @@ input[type="radio" i]:focus-visible {
   outline-offset: 0;
   outline: none;
 }
-
-/* Активный чекбокс со значком */
-.w-checkbox-input--inputType-custom.w--redirected-checked {
-  background-color: #000; /* Классический чёрный */
-  border-color: #000;
-  background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .w-checkbox-input--inputType-custom.w--redirected-focus {
   box-shadow: none;
 }
-
-.w-radio {
-  margin: 0;
-  padding: 0;
-}
-
 /* Кастомные радиокнопки */
 .w-form-formradioinput--inputType-custom {
-  width: 1rem;
-  height: 1rem;
   appearance: none;
   -webkit-appearance: none;
-  border: 1px solid #868e96; /* Серый бордер */
-  border-radius: 50%;
-  background-color: transparent;
   position: relative;
   cursor: pointer;
   outline: none;
 }
-.w-form-formradioinput--inputType-custom.w--redirected-checked {
-  border-width: 1px;
-  border-color: #000;
-}
 .w-form-formradioinput--inputType-custom.w--redirected-checked:after {
 	position: absolute;
-	inset: 3px;
+	inset: 2px;
 	width: auto;
 	height: auto;
-	background-color: #000;
+	background-color: currentColor;
 	content: "";
 	border-radius: 50%;
 }
 .w-form-formradioinput--inputType-custom.w--redirected-focus {
   box-shadow: none;
-}
-
-.w-dropdown {
-	margin: 0px;
 }
