@@ -1,155 +1,156 @@
-/* ========================
-   Базовые стили для html и body
-   ======================== */
-/* Адаптивный размер шрифта с помощью clamp:
-   шрифт масштабируется от 14px до 20px в зависимости от ширины экрана */
-html {
-  font-size: clamp(14px, 1.5vw, 20px);
-  -webkit-font-smoothing: antialiased; /* Сглаживание шрифтов для WebKit (Chrome, Safari) */
-  -moz-osx-font-smoothing: grayscale; /* Сглаживание для Firefox на Mac */
-  text-rendering: optimizeLegibility; /* Оптимизация рендеринга текста для читаемости */
-  -webkit-text-size-adjust: 100%; /* Отключение масштабирования текста в iOS */
-}
+	/* ========================
+		Базовые стили для html и body
+		======================== */
+	/* Адаптивный размер шрифта с помощью clamp:
+		шрифт масштабируется от 14px до 20px в зависимости от ширины экрана */
+	html {
+	font-size: clamp(14px, 1.5vw, 20px);
+	-webkit-font-smoothing: antialiased; /* Сглаживание шрифтов для WebKit (Chrome, Safari) */
+	-moz-osx-font-smoothing: grayscale; /* Сглаживание для Firefox на Mac */
+	text-rendering: optimizeLegibility; /* Оптимизация рендеринга текста для читаемости */
+	-webkit-text-size-adjust: 100%; /* Отключение масштабирования текста в iOS */
+	}
 
-body {
-  font-size: 1rem;  /* Размер шрифта согласно html */
-}
+	body {
+	font-size: 1rem;  /* Размер шрифта согласно html */
+	}
 
-/* ========================
-   Контейнеры Webflow
-   ======================== */
-/* Сброс максимальной ширины и скрытие псевдоэлементов у контейнеров */
-.w-container:before,
-.w-container:after {
-  display: none;
-}
+	/* ========================
+		Контейнеры Webflow
+		======================== */
+	/* Сброс максимальной ширины и скрытие псевдоэлементов у контейнеров */
+	.w-container:before,
+	.w-container:after {
+	display: none;
+	}
 
-/* ========================
-   Типографика и тексты
-   ======================== */
-/* Сброс стилей для адреса, убираем курсив */
-address {
-  font-style: normal;
-}
+	/* ========================
+		Типографика и тексты
+		======================== */
+	/* Сброс стилей для адреса, убираем курсив */
+	address {
+	font-style: normal;
+	}
 
-/* Убираем отступы у figure */
-figure {
-  margin: 0;
-}
+	/* Убираем отступы у figure */
+	figure {
+	margin: 0;
+	}
 
-/* Параграфы: сбрасываем margin, наследуем цвет */
-p {
-  margin: 0;
-}
+	/* Параграфы: сбрасываем margin, наследуем цвет */
+	p {
+	margin: 0;
+	}
 
-/* Заголовки: убираем отступы, наследуем стили, задаём нормальную высоту строки */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
+	/* Заголовки: убираем отступы, наследуем стили, задаём нормальную высоту строки */
+	h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	}
 
-/* Списки: сброс margin, задаём отступ слева для видимости */
-ul, ol {
-  margin: 0;
-}
+	/* Списки: сброс margin, задаём отступ слева для видимости */
+	ul, ol {
+	margin: 0;
+	}
 
-/* Элементы списка: базовые сбросы и наследование */
-li {
-  margin: 0;
-  padding: 0;
-}
+	/* Элементы списка: базовые сбросы и наследование */
+	li {
+	margin: 0;
+	padding: 0;
+	}
 
-/* ========================
-   Ссылки и кнопки
-   ======================== */
-/* Общие стили для ссылок,
-   убираем подчеркивание и задаём курсор */
-a, a.w-inline-block {
-  text-underline-offset: 3px;
-  cursor: pointer;
-}
+	/* ========================
+		Ссылки и кнопки
+		======================== */
+	/* Общие стили для ссылок,
+		убираем подчеркивание и задаём курсор */
+	a, a.w-inline-block {
+	text-underline-offset: 3px;
+	cursor: pointer;
+	}
 
-/* Состояния hover и focus для ссылок и inline-block */
-a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
-  outline: none; /* Отключаем стандартный outline, если есть кастомный */
-}
+	/* Состояния hover и focus для ссылок и inline-block */
+	a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
+	outline: none; /* Отключаем стандартный outline, если есть кастомный */
+	}
 
-/* Стили для кнопок ссылок */
-a.w-button {
-  cursor: pointer;
-}
-a.w-button:hover, a.w-button:focus {
-  text-decoration: none;
-  outline: none;
-}
+	/* Стили для кнопок ссылок */
+	a.w-button {
+	cursor: pointer;
+	}
+	a.w-button:hover, a.w-button:focus {
+	text-decoration: none;
+	outline: none;
+	}
 
-/* Стили для input-кнопок */
-input.w-button {
-  cursor: pointer;
-  text-decoration: none;
-}
-/* ========================
-   Формы и элементы управления (Webflow)
-   ======================== */
-/* Сброс для label и лейблов Webflow */
-label {
-  margin: 0;
-  padding: 0;
-}
+	/* Стили для input-кнопок */
+	input.w-button {
+	cursor: pointer;
+	text-decoration: none;
+	}
+	/* ========================
+		Формы и элементы управления (Webflow)
+		======================== */
+	/* Сброс для label и лейблов Webflow */
+	label {
+	margin: 0;
+	padding: 0;
+	}
 
 
-/* Убираем стандартную стрелку у селекта */
-.w-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: none;
-}
-select::-ms-expand {
-  display: none; /* Скрытие стрелочки у IE и Edge */
-}
+	/* Убираем стандартную стрелку у селекта */
+	.w-select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: none;
+	}
+	select::-ms-expand {
+	display: none; /* Скрытие стрелочки у IE и Edge */
+	}
 
-/* Сбросы и стили чекбоксов и радиокнопок */
-.w-checkbox,
-.w-radio {
-  margin: 0px;
-}
-
-/* Кастомный чекбокс */
-.w-checkbox-input {
-  float: left;
-  margin: 0;
-}
-/* Кастомный ратио */
-.w-radio-input {
+	/* Сбросы и стили чекбоксов и радиокнопок */
+	.w-checkbox,
+	.w-radio {
 	margin: 0px;
-}
+	padding: 0px;
+	}
 
-/* Убираем outline при фокусе у чекбоксов и радиокнопок */
-input[type="checkbox" i]:focus-visible,
-input[type="radio" i]:focus-visible {
-  outline-offset: 0;
-  outline: none;
-}
-.w-checkbox-input--inputType-custom.w--redirected-focus {
-  box-shadow: none;
-}
-/* Кастомные радиокнопки */
-.w-form-formradioinput--inputType-custom {
-  appearance: none;
-  -webkit-appearance: none;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-}
-.w-form-formradioinput--inputType-custom.w--redirected-checked:after {
-	position: absolute;
-	inset: 2px;
-	width: auto;
-	height: auto;
-	background-color: currentColor;
-	content: "";
-	border-radius: 50%;
-}
-.w-form-formradioinput--inputType-custom.w--redirected-focus {
-  box-shadow: none;
-}
+	/* Кастомный чекбокс */
+	.w-checkbox-input {
+	float: left;
+	margin: 0;
+	}
+	/* Кастомный ратио */
+	.w-radio-input {
+		margin: 0px;
+	}
+
+	/* Убираем outline при фокусе у чекбоксов и радиокнопок */
+	input[type="checkbox" i]:focus-visible,
+	input[type="radio" i]:focus-visible {
+	outline-offset: 0;
+	outline: none;
+	}
+	.w-checkbox-input--inputType-custom.w--redirected-focus {
+	box-shadow: none;
+	}
+	/* Кастомные радиокнопки */
+	.w-form-formradioinput--inputType-custom {
+	appearance: none;
+	-webkit-appearance: none;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	}
+	.w-form-formradioinput--inputType-custom.w--redirected-checked:after {
+		position: absolute;
+		inset: 2px;
+		width: auto;
+		height: auto;
+		background-color: currentColor;
+		content: "";
+		border-radius: 50%;
+	}
+	.w-form-formradioinput--inputType-custom.w--redirected-focus {
+	box-shadow: none;
+	}
