@@ -5,7 +5,6 @@
    шрифт масштабируется от 14px до 20px в зависимости от ширины экрана */
 html {
   font-size: clamp(14px, 1.5vw, 20px);
-  scroll-behavior: smooth; /* Плавный скролл для якорей и прокрутки */
   -webkit-font-smoothing: antialiased; /* Сглаживание шрифтов для WebKit (Chrome, Safari) */
   -moz-osx-font-smoothing: grayscale; /* Сглаживание для Firefox на Mac */
   text-rendering: optimizeLegibility; /* Оптимизация рендеринга текста для читаемости */
@@ -97,7 +96,8 @@ li {
 /* Общие стили для ссылок,
    убираем подчеркивание и задаём курсор */
 a, a.w-inline-block {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   color: inherit;
   font: inherit;
   font-weight: normal;
@@ -116,11 +116,11 @@ a:hover, a:focus, a.w-inline-block:hover, a.w-inline-block:focus {
 a.w-button {
   color: white;
   background-color: #000;
-  text-align: middle;
+  text-align: center;
   line-height: normal;
   font-size: 1rem;
   font-weight: normal;
-  padding: 0.5rem, 1rem;
+  padding: 1rem;
   margin: 0;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -142,7 +142,7 @@ input.w-button {
   background-color: #000;
   border: none;
   border-radius: 0;
-  padding: 0.5rem, 1rem;
+  padding: 1rem;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
@@ -184,7 +184,7 @@ label,
   width: auto;
   height: auto;
   margin: 0;
-  padding: 0.5rem, 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   line-height: normal;
   display: block;
@@ -235,8 +235,8 @@ input[type="radio" i]:focus-visible {
 
 /* Активный чекбокс со значком */
 .w-checkbox-input--inputType-custom.w--redirected-checked {
-  background-color: #28a745; /* Классический зелёный */
-  border-color: #28a745;
+  background-color: #000; /* Классический чёрный */
+  border-color: #000;
   background-image: url(https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg);
   background-position: 50%;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ input[type="radio" i]:focus-visible {
 }
 .w-form-formradioinput--inputType-custom.w--redirected-checked:after {
 	position: absolute;
-	inset: 2px;
+	inset: 3px;
 	width: auto;
 	height: auto;
 	background-color: #000;
