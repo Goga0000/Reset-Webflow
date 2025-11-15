@@ -76,6 +76,7 @@
 	/* Стили для кнопок ссылок */
 	a.w-button {
 	cursor: pointer;
+	text-decoration: none;
 	}
 	a.w-button:hover, a.w-button:focus {
 	text-decoration: none;
